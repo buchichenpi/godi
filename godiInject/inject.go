@@ -15,7 +15,7 @@ func Provide(objects ...interface{}) {
 		}
 
 		if constructor, ok := obj.(interfaces.Constructor); ok {
-			bean, name := constructor.Init()
+			bean, name := constructor.Construct()
 			if bean != nil {
 				beans = append(beans, &inject.Object{
 					Value: bean,
