@@ -1,5 +1,7 @@
 This is a wrapper of facebookarchive/inject which is a tool of di used in Go.
 
+这是一个封装了facebookarchive/inject的依赖注入项目
+
 注意事项：
     依照facebookarchive/inject的要求，所有需要注入的字段必须对其他包可见
 
