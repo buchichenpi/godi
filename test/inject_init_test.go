@@ -13,7 +13,7 @@ type Parent3 struct {
 	B     TestI `inject:""`
 }
 
-func (p *Parent3) Construct() (interface{}, string) {
+func (p *Parent3) Init() (interface{}, string) {
 	p.Count = 11
 	return p, ""
 }
@@ -25,7 +25,7 @@ type Child3 struct {
 func (c *Child3) get() {
 }
 
-func (c *Child3) Construct() (interface{}, string) {
+func (c *Child3) Init() (interface{}, string) {
 	c.A = time.Now().Second()
 	return c, ""
 }

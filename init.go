@@ -2,6 +2,6 @@ package godi
 
 import "github.com/buchichenpi/godi/godiInject"
 
-func Init() {
+func Populate() {
 	godiInject.Populate()
 }
