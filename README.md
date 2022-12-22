@@ -24,6 +24,16 @@ func (s *SayHello) Init() (obj interface{}, name string) {
 	return s, ""
 }
 ```
+如果需要使用名字注入，则可以在Provide的时候使用ObjectWithName
+```go
+godiInject.Provide(p, &godiInject.ObjectWithName{
+		Object: &Child2{1},
+		Bean:   "b",
+	}, &godiInject.ObjectWithName{
+		Object: &Child2{2},
+		Bean:   "c",
+	})
+```
 step2:
 ```go
 func main() {
